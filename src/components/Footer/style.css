@@ -1,4 +1,9 @@
 footer {
-  background-color: lightblue;
+  background-color: #7640a0;
   height: 100px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Raleway;
 }
