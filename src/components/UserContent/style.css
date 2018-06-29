@@ -7,9 +7,7 @@ aside {
   flex-direction: column;
 }
 
-img {
-  border: 1px solid #000;
-
+.avatar {
   width: 290px;
   height: 290px;
   margin-top: 30px;
@@ -27,9 +25,7 @@ img {
     flex-direction: column;
   }
 
-  img {
-    border: 1px solid #000;
-
+  .avatar {
     width: 50%;
     height: 50%;
     margin-top: 30px;
