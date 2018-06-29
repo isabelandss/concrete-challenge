@@ -1,0 +1,28 @@
+form {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  width: 100%;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.4);
+}
+
+input {
+  position: relative;
+  width: 85%;
+  height: 50px;
+  border: none;
+}
+
+button {
+  position: relative;
+  width: 15%;
+  height: 52px;
+  border: none;
+  background-color: #ac53f2;
+  color: white;
+  cursor: pointer;
+}
+
+.material-icons {
+  width: auto;
+}
