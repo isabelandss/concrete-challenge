@@ -4,40 +4,18 @@ import UserContent from '../../components/UserContent';
 import RepositoryContent from '../../components/RepositoryContent';
 import Footer from '../../components/Footer';
 import './style.css';
-import { userService } from '../../services/user';
 
 class Result extends React.Component {
-  constructor() {
-    super();
-
-    this.state = {
-      user: {},
-      repos: {}
-    };
-  }
-
-  async componentDidMount() {
-    const user = await userService.getUser('barbaromatrix');
-    console.log(user);
-
-    this.setState({
-      user
-    });
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
 
   render() {
     return (
       <div>
         <Header />
         <div className="wrapper">
-          <UserContent 
-            name={this.state.user.name} 
-            login={this.state.user.login}
-            avatar_url={this.state.user.avatar_url}  
-            followers={this.state.user.followers}
-            following={this.state.user.following}
-            bio={this.state.user.bio}
-          />
+          <UserContent />
           <section>
             <RepositoryContent />
             <RepositoryContent />
