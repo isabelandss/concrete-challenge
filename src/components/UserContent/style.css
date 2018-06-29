@@ -1,10 +1,26 @@
 aside {
-  background-color: yellow;
+  /* background-color: yellow; */
   height: auto;
   width: 30%;
 
   display: flex;
   flex-direction: column;
+}
+
+aside p {
+  display: flex;
+  font-family: Raleway;
+  justify-content: center;
+}
+
+.user-name {
+  margin-top: 15px;
+  font-size: 25px;
+} 
+
+.user-login {
+  margin-top: 5px;
+  font-size: 18px;
 }
 
 .avatar {
@@ -17,12 +33,28 @@ aside {
 
 @media (max-width: 600px) { 
   aside {
-    background-color: yellow;
+    /* background-color: yellow; */
     height: 370px;
     width: 100%;
 
     display: flex;
     flex-direction: column;
+  }
+
+  aside p {
+    display: flex;
+    font-family: Raleway;
+    justify-content: center;
+  }
+
+  .user-name {
+    margin-top: 15px;
+    font-size: 25px;
+  } 
+
+  .user-login {
+    margin-top: 5px;
+    font-size: 18px;
   }
 
   .avatar {
