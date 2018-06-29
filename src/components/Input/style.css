@@ -11,6 +11,9 @@ input {
   width: 85%;
   height: 50px;
   border: none;
+
+  padding-left: 9px;
+  padding-right: 9px;
 }
 
 button {

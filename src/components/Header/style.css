@@ -29,6 +29,7 @@ nav {
   flex-direction: row;
   align-items: center;
 
+  padding-top: 0;
   padding-right: 14px;
   padding-bottom: 14px;
 }
@@ -65,7 +66,8 @@ nav {
     justify-content: center;
     align-items: center;
 
-    padding: 6px;
+    padding: 12px;
+    background-color: #f5f5f5;
   }
 
   .name-page {

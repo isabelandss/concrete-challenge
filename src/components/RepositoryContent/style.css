@@ -1,5 +1,6 @@
 article {
-  border: 1px solid #000;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  background-color: white;
   max-width: 100%;
   height: 150px;
 
@@ -7,13 +8,39 @@ article {
   margin-bottom: 5px;
 }
 
+.title-repo {
+  font-family: Raleway;
+  font-size: 25px;
+  color: #ac53f2;
+  margin: 12px;
+}
+
+.description-repo {
+  margin: 12px;
+}
+
+article i {
+  position: relative;
+  margin-left: 12px;
+  padding-bottom: 8px; 
+}
+
+.rate-repo {
+  display: flex;
+  align-items: center;
+}
+
+.quantity {
+  padding-bottom: 5px;
+}
+
 @media (max-width: 600px) { 
   article {
-    border: 1px solid #000;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     max-width: 100%;
     height: 150px;
 
     margin: 10px;
-    margin-bottom: 5px;
+    margin-top: 0;
   }
 }
