@@ -7,34 +7,11 @@ aside {
   flex-direction: column;
 }
 
-aside p {
-  display: flex;
-  font-family: Raleway;
-  justify-content: center;
-}
-
-.user-name {
-  margin-top: 15px;
-  font-size: 25px;
-} 
-
-.user-login {
-  margin-top: 5px;
-  font-size: 18px;
-}
-
 .avatar {
-  width: 290px;
-  height: 290px;
-  margin-top: 30px;
-  margin-left: 15%;
-  margin-right: 15%;
+  width: 280px;
+  height: 280px;
+  border-radius: 2px;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.4);
-}
-
-.bio {
-  margin: 10px;
-  text-align: center; 
 }
 
 @media (max-width: 600px) { 

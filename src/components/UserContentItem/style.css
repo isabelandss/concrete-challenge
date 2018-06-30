@@ -1,0 +1,28 @@
+.user-name {
+  width: 280px;
+  height: 40px;
+  font-family: Raleway;
+  font-size: 35px;
+  font-weight: 300;
+  color: #000000;
+  color: var(--black);
+}
+
+.user-login {
+  width: 280px;
+  height: 25px;
+  font-family: Raleway;
+  font-size: 20px;
+  font-weight: 300;
+  color: #5c5c5c;
+}
+
+.user-followers,
+.user-following,
+.user-company,
+.user-location,
+.user-stars,
+.user-email,
+.user-bio {
+  
+}
