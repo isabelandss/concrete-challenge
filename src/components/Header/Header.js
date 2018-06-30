@@ -3,7 +3,7 @@ import './style.css';
 import Input from '../Input';
 import GitIcon from '../../assets/images/github.svg';
 
-const Header = ({ onChange, onClick }) => 
+const Header = ({ onChange, onSubmit }) => 
   <header>
     <nav>
       <div className="info-page">
@@ -12,7 +12,7 @@ const Header = ({ onChange, onClick }) =>
         <p className="lastname-page">Search</p>
       </div>
       <div className="search-box">
-        <Input onChange={onChange} onClick={onClick}/>
+        <Input onChange={onChange} onSubmit={onSubmit}/>
       </div>
     </nav>
   </header>

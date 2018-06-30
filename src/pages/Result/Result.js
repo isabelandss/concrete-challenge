@@ -8,19 +8,21 @@ import { userService } from '../../services/user';
 import { repoService } from '../../services/repo';
 
 class Result extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       search: '',
       user: {},
       repos: []
     };
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  async componentDidMount() {
-    const user = await userService.getUser('ortense');
-    const repos = await repoService.getRepos('ortense');
+  componentDidMount() {
+    const { user, repos } = this.props.location.state;
 
     this.setState({
       user,
@@ -33,7 +35,7 @@ class Result extends React.Component {
     this.setState({ search: value });
   }
 
-  async onClick(event) {
+  async handleSubmit(event) {
     event.preventDefault();
     const user = await userService.getUser(this.state.search);
     const repos = await repoService.getRepos(this.state.search);
@@ -49,8 +51,8 @@ class Result extends React.Component {
     return (
       <div>
         <Header 
-          onChange={this.handleChange.bind(this)}
-          onClick={this.onClick.bind(this)}
+          onChange={this.handleChange}
+          onSubmit={this.handleSubmit}
         />
         <div className="wrapper">
           <UserContent 
