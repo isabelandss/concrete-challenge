@@ -20,6 +20,11 @@ nav {
   align-items: center;
 }
 
+.name-page {
+  color: #ac53f2;
+  font-weight: bold;
+}
+
 .search-box {
   width: 60%;
   height: 80px;
@@ -70,6 +75,7 @@ nav {
     background-color: #f5f5f5;
   }
 
+  .lastname-page,
   .name-page {
     display: none;
   }

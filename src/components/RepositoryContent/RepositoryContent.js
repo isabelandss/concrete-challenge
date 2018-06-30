@@ -1,17 +1,17 @@
 import React from 'react';
 import './style.css';
 
-const RepositoryContent = (props) => 
+const RepositoryContent = ({ name, description, stars }) => 
   <article>
     <header className="title-repo">
-      concrete-challenge
+      {name}
     </header>
     <p className="description-repo">
-      Sed sed lacus ex. Maecenas eget sodales nisi, sit amet aliquet tortor. Mauris auctor feugiat imperdiet.
+      {description}
     </p>
     <div className="rate-repo">
       <i className="material-icons">star_border</i>
-      <p className="quantity">7</p>
+      <p className="quantity">{stars}</p>
     </div>
   </article>
 
