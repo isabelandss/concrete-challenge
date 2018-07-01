@@ -1,10 +1,17 @@
-const token = '5fcf426202fc4088a3164c76e3a3570ec391517d';
+import config from '../../configuration';
 
 export default ({request}) => ({
   getUser: async username => {
-    const baseUrl = 'https://api.github.com/users';
-    const { data } = await request.get(`${baseUrl}/${username}?access_token=${token}`);
-
-    return data;
+    try {
+      const { data } = await request.get(`${config.github_api_url}/users/${username}`, {
+        headers: {
+          'Authorization': `token ${config.access_token}`
+        }
+      });
+      return data;
+    } catch (error) {
+      console.log(error);
+      return error;
+    }
   }
 });

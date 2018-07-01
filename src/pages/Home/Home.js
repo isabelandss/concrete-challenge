@@ -23,11 +23,15 @@ class Home extends Component {
   }
 
   async onSubmit(event) {
-    event.preventDefault();
-    const user = await userService.getUser(this.state.search);
-    const repos = await repoService.getRepos(this.state.search);
+    try {
+      event.preventDefault();
+      const user = await userService.getUser(this.state.search);
+      const repos = await repoService.getRepos(this.state.search);
 
-    this.props.history.push('/result', { user, repos });
+      this.props.history.push('/result', { user, repos });
+    } catch (error) {
+      console.log('Error no home ', error)
+    }
   }
 
   render() {
@@ -35,7 +39,7 @@ class Home extends Component {
       <div className="home-wrapper">
         <div className="home-search">
           <p className="logo">Github<span>Search</span></p>
-          <Input onChange={this.onChange} onSubmit={this.onSubmit}/>
+          <Input onChange={this.onChange} onSubmit={this.onSubmit} />
         </div>
       </div>
     );
