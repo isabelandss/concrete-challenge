@@ -1,4 +1,5 @@
 import React from 'react';
+import Star from '../../assets/images/star.svg';
 import './style.css';
 
 const RepositoryContent = ({ name, description, stars }) => 
@@ -10,7 +11,7 @@ const RepositoryContent = ({ name, description, stars }) =>
       {description}
     </p>
     <div className="rate-repo">
-      <i className="material-icons">star_border</i>
+      <img src={Star} alt=""/>
       <p className="quantity">{stars}</p>
     </div>
   </article>

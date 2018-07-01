@@ -50,23 +50,31 @@ class Result extends React.Component {
     const { user, repos } = this.state;
     return (
       <div>
-        <Header 
+        <Header
           onChange={this.handleChange}
           onSubmit={this.handleSubmit}
         />
         <div className="wrapper">
-          <UserContent 
-            name={user.name} 
-            login={user.login}
-            avatar_url={user.avatar_url}  
-            followers={user.followers}
-            following={user.following}
-            bio={user.bio}
+          <UserContent
+            avatar_url={user.avatar_url}
+            user={
+              {
+                name: user.name,
+                login: user.login,
+                followers: user.followers,
+                following: user.following,
+                company: user.company,
+                location: user.location,
+                stars: user.stars,
+                email: user.email,
+                bio: user.bio
+              }
+            }
           />
           <section>
             {repos.map(repo => {
               return (
-                <RepositoryContent 
+                <RepositoryContent
                   name={repo.name}
                   description={repo.description}
                   stars={repo.stargazers_count}

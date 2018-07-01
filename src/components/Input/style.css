@@ -32,6 +32,7 @@ button {
   cursor: pointer;
 }
 
-.material-icons {
-  width: auto;
+button img {
+  width: 30px;
+  height: 30px;
 }
