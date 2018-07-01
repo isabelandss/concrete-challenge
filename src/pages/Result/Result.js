@@ -62,7 +62,7 @@ class Result extends React.Component {
                 name: user.name,
                 login: user.login,
                 followers: user.followers,
-                following: user.following,
+                // following: user.following,
                 company: user.company,
                 location: user.location,
                 stars: user.stars,

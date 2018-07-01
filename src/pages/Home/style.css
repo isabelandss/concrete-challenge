@@ -8,7 +8,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
 
 .home-search {
@@ -18,6 +17,11 @@
   height: 50px;
 }
 
+.logo {
+  font-family: Monaco;
+}
+
 p span {
-  font-family: "Raleway script=all rev=1";
+  font-family: "Raleway";
+  font-style: italic;
 }
