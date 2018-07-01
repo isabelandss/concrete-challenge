@@ -34,7 +34,7 @@ class Home extends Component {
     return (
       <div className="home-wrapper">
         <div className="home-search">
-          <p>Github<span>Search</span></p>
+          <p className="logo">Github<span>Search</span></p>
           <Input onChange={this.onChange} onSubmit={this.onSubmit}/>
         </div>
       </div>
