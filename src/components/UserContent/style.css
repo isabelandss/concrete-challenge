@@ -12,6 +12,10 @@ aside {
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.4);
 }
 
+.userContent-detail {
+  
+}
+
 @media (max-width: 600px) { 
   aside {
     /* background-color:#f5f5f5; */

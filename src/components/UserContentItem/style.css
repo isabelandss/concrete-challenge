@@ -1,3 +1,17 @@
+.content-item {
+  display: flex;
+  align-items: center;
+}
+
+.content-item img {
+  margin-bottom: 14px;
+}
+
+.content-item p {
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
 .user-name {
   width: 280px;
   height: 40px;
@@ -5,7 +19,6 @@
   font-size: 35px;
   font-weight: 300;
   color: #000000;
-  color: var(--black);
 }
 
 .user-login {
@@ -24,5 +37,5 @@
 .user-stars,
 .user-email,
 .user-bio {
-  
+  font-family: 'Raleway'
 }
