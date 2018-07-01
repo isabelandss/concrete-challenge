@@ -25,3 +25,14 @@ p span {
   font-family: "Raleway";
   font-style: italic;
 }
+
+@media (max-width: 600px) {
+  .logo {
+    margin-bottom: 5px;
+  }
+
+  .home-search {
+    font-size: 35px;
+    width: 90%;
+  }
+}
