@@ -14,7 +14,7 @@ class Result extends React.Component {
     this.state = {
       search: '',
       user: {},
-      repos: []
+      repos: { repositories: [], stars: 0 }
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -56,23 +56,22 @@ class Result extends React.Component {
         />
         <div className="wrapper">
           <UserContent
+            name={user.name}
+            login={user.login}
             avatar_url={user.avatar_url}
             user={
               {
-                name: user.name,
-                login: user.login,
-                followers: user.followers,
-                // following: user.following,
                 company: user.company,
                 location: user.location,
-                stars: user.stars,
-                email: user.email,
+                stars: repos.stars,
+                public_repos: user.public_repos,
+                followers: user.followers,
                 bio: user.bio
               }
             }
           />
           <section>
-            {repos.map(repo => {
+            {repos.repositories.map(repo => {
               return (
                 <RepositoryContent
                   name={repo.name}
