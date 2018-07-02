@@ -11,7 +11,7 @@ export default ({request}) => ({
       return data;
     } catch (error) {
       console.log(error);
-      return error;
+      throw error;
     }
   }
 });
