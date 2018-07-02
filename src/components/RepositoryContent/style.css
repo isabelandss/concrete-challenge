@@ -9,6 +9,7 @@ article {
   font-family: Raleway;
   font-size: 35px;
   color: #ac53f2;
+  word-wrap: break-word;
 }
 
 .description-repo {
