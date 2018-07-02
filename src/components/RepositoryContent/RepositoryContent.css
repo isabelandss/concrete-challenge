@@ -1,10 +1,10 @@
-article {
+.repository-content-wrapper {
   background-color: white;
   max-width: 100%;
   margin-bottom: 5px;
 }
 
-.title-repo {
+.repository-title {
   margin: 12px;
   font-family: Raleway;
   font-size: 35px;
@@ -12,7 +12,7 @@ article {
   word-wrap: break-word;
 }
 
-.description-repo {
+.repository-description {
   margin: 12px;
   font-family: Raleway;
   font-size: 20px;
@@ -22,27 +22,34 @@ article {
   word-wrap: break-word;
 }
 
-article img {
+.repository-content-wrapper img {
   position: relative;
   width: 25.5px;
   height: 24.5px;
   margin-left: 12px;
   margin-right: 8px;
-  padding-bottom: 8px; 
+  padding-bottom: 8px;
 }
 
-.rate-repo {
+.repository-rate {
   display: flex;
   align-items: center;
   font-family: Raleway;
 }
 
-.quantity {
+.repository-quantity {
   padding-bottom: 5px;
+
+  width: 255.3px;
+  height: 22.4px;
+  font-family: Raleway;
+  font-size: 20px;
+  font-weight: 300;
+  color: #5c5c5c;
 }
 
 @media (max-width: 600px) { 
-  article {
+  .repository-content-wrapper {
     max-width: 100%;
     height: auto;
 

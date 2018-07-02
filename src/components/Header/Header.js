@@ -1,14 +1,14 @@
 import React from 'react';
-import './style.css';
+import './Header.css';
 import Input from '../Input';
 
 const Header = ({ onChange, onSubmit }) =>
   <header>
-    <nav>
-      <div className="info-page">
-        <p className="name-page">GitHub<span className="lastname-page">Search</span></p>
+    <nav className="header-nav">
+      <div className="header-logo">
+        <p className="header-firstname">GitHub<span className="header-lastname">Search</span></p>
       </div>
-      <div className="search-box">
+      <div className="header-search">
         <Input onChange={onChange} onSubmit={onSubmit}/>
       </div>
     </nav>

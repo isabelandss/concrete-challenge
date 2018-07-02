@@ -21,6 +21,10 @@
   font-family: Monaco;
 }
 
+p span::before {
+  content: " ";
+}
+
 p span {
   font-family: "Raleway";
   font-style: italic;

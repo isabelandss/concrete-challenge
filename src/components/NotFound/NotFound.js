@@ -1,7 +1,7 @@
 import React from 'react';
-import './style.css';
+import './NotFound.css';
 
 const NotFound = () =>
-  <div className="notFound">User not found :(</div>
+  <div className="not-found">User not found :(</div>
 
 export default NotFound;
