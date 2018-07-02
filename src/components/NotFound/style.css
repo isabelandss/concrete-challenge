@@ -1,0 +1,13 @@
+.notFound {
+  width: 315px;
+  height: 41px;
+  font-family: Raleway;
+  font-size: 40px;
+  color: #ac53f2;
+}
+
+@media (max-width: 600px) {
+  .notFound {
+
+  }
+}
