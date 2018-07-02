@@ -12,9 +12,11 @@ const UserContent = ({ user, avatar_url, name, login }) => {
           Object
             .entries(user)
             .map(([name, value], i) => {
-              return (
-                <UserContentItem key={i} name={name} value={value} />
-              );
+              if(value) {
+                return (
+                  <UserContentItem key={i} name={name} value={value} />
+                );
+              }
             })
         }
     </aside>
