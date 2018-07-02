@@ -94,9 +94,10 @@ class Result extends React.Component {
               })}
             </section>
           </div>
-
-          : <NotFound />}
-        <Footer/>
+          : <div className="wrapper-notfound">
+              <NotFound />
+            </div>}
+        <Footer className={this.state.found ? '' : 'fixed'} />
       </div>
     );
   }

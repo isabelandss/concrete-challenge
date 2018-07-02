@@ -1,8 +1,8 @@
 import React from 'react';
 import './style.css';
 
-const Footer = () =>
-  <footer>
+const Footer = ({ className = '' }) =>
+  <footer className={className}>
     Copyright © Isabela Neri 2018
   </footer>
 
