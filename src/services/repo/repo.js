@@ -22,7 +22,7 @@ export default ({request}) => ({
 
     } catch (error) {
       console.log(error);
-      return error.response;
+      throw error;
     }
   }
 });
