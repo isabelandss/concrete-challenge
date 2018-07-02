@@ -39,6 +39,13 @@
 
 .repository-quantity {
   padding-bottom: 5px;
+
+  width: 255.3px;
+  height: 22.4px;
+  font-family: Raleway;
+  font-size: 20px;
+  font-weight: 300;
+  color: #5c5c5c;
 }
 
 @media (max-width: 600px) { 

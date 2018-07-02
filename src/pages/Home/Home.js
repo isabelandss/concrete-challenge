@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Input from '../../components/Input';
 import { userService } from '../../services/user';
 import { repoService } from '../../services/repo';
-import './style.css';
+import './Home.css';
 
 class Home extends Component {
   constructor(props) {

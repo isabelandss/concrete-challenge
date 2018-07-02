@@ -1,21 +1,38 @@
 .content-item {
   display: flex;
-  margin-top: 7px;
-  margin-bottom: 7px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   color: #5c5c5c;
 }
 
 .content-item img {
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 }
 
 .content-item p {
   margin-left: 5px;
-  margin-top: 5px;
+  margin-top: 3px;
+  height: 22px;
+  font-family: Raleway;
+  font-size: 20px;
+  font-weight: 300;
+  color: #5c5c5c;
 }
 
 .user-followers::after {
-  content: "\00a0seguidores";
+  content: "\00a0 followers";
+}
+
+.user-stars::after {
+  content: "\00a0stars";
+}
+
+.user-public_repos::after {
+  content: "\00a0repositories";
+}
+
+.user-bio { 
+  text-align: start;
 }
 
 .user-followers,
@@ -30,6 +47,10 @@
 
 @media (max-width: 600px) {
   .content-item {
-    justify-content: center;
+    margin-left: 20%;
+  }
+
+  .content-item .user-bio {
+    margin-left: -51px;
   }
 }

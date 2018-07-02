@@ -3,6 +3,7 @@
   flex-grow: 1;
   flex-direction: column;
   padding: 2vh 3vw;
+  padding-bottom: 45px;
 }
 
 .user-avatar {
@@ -61,7 +62,8 @@
 
   .user-avatar {
     width: 50%;
-    height: 50%;
+    /* height: 50%; */
+    height: 24%;
     margin-top: 30px;
     margin-left: 25%;
     margin-right: 25%;

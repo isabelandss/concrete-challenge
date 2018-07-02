@@ -7,10 +7,16 @@
 
   font-family: 'Raleway', sans-serif;
   font-size: 30px;
+
+  padding-top: 20px;
+}
+
+.header-firstname span::before {
+  content: " ";
 }
 
 .header-logo {
-  width: 40%;
+  flex-grow: 1;
   height: 80px;
   display: flex;
   flex-direction: row;
@@ -34,7 +40,8 @@
 }
 
 .header-search {
-  width: 60%;
+  flex-grow: 1;
+  width: 64%;
   height: 80px;
 
   padding: 5px;
@@ -48,12 +55,13 @@
   margin-right: 6px;
 }
 
-@media (max-width: 600px) { 
+@media (max-width: 600px) {
   .header-nav {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     height: 140px;
     max-width: 100%;
+    padding-top: 5px;
   }
 
   .header-logo {
