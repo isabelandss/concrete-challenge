@@ -28,9 +28,9 @@ class Home extends Component {
       const user = await userService.getUser(this.state.search);
       const repos = await repoService.getRepos(this.state.search);
 
-      this.props.history.push('/result', { user, repos });
+      this.props.history.push('/result', { user, repos, found: true });
     } catch (error) {
-      console.log('Error no home ', error)
+      this.props.history.push('/result', { found: false });
     }
   }
 

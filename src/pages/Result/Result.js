@@ -3,6 +3,7 @@ import Header from '../../components/Header';
 import UserContent from '../../components/UserContent';
 import RepositoryContent from '../../components/RepositoryContent';
 import Footer from '../../components/Footer';
+import NotFound from '../../components/NotFound';
 import './style.css';
 import { userService } from '../../services/user';
 import { repoService } from '../../services/repo';
@@ -14,7 +15,8 @@ class Result extends React.Component {
     this.state = {
       search: '',
       user: {},
-      repos: { repositories: [], stars: 0 }
+      repos: { repositories: [], stars: 0 },
+      found: true,
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -22,11 +24,12 @@ class Result extends React.Component {
   }
 
   componentDidMount() {
-    const { user, repos } = this.props.location.state;
+    const { user, repos, found } = this.props.location.state;
 
     this.setState({
       user,
-      repos
+      repos,
+      found
     });
   }
 
@@ -37,13 +40,21 @@ class Result extends React.Component {
 
   async handleSubmit(event) {
     event.preventDefault();
-    const user = await userService.getUser(this.state.search);
-    const repos = await repoService.getRepos(this.state.search);
+    try {
+      const user = await userService.getUser(this.state.search);
+      const repos = await repoService.getRepos(this.state.search);
 
-    this.setState({
-      user,
-      repos
-    });
+      this.setState({
+        user,
+        repos,
+        found: true,
+      });
+
+    } catch (error) {
+      this.setState({
+        found: false
+      });
+    }
   }
 
   render() {
@@ -54,34 +65,37 @@ class Result extends React.Component {
           onChange={this.handleChange}
           onSubmit={this.handleSubmit}
         />
-        <div className="wrapper">
-          <UserContent
-            name={user.name}
-            login={user.login}
-            avatar_url={user.avatar_url}
-            user={
-              {
-                company: user.company,
-                location: user.location,
-                stars: repos.stars,
-                public_repos: user.public_repos,
-                followers: user.followers,
-                bio: user.bio
+        { this.state.found ?
+          <div className="wrapper">
+            <UserContent
+              name={user.name}
+              login={user.login}
+              avatar_url={user.avatar_url}
+              user={
+                {
+                  company: user.company,
+                  location: user.location,
+                  stars: repos.stars,
+                  public_repos: user.public_repos,
+                  followers: user.followers,
+                  bio: user.bio
+                }
               }
-            }
-          />
-          <section>
-            {repos.repositories.map(repo => {
-              return (
-                <RepositoryContent
-                  name={repo.name}
-                  description={repo.description}
-                  stars={repo.stargazers_count}
-                  key={repo.id}
-                />)
-            })}
-          </section>
-        </div>
+            />
+            <section>
+              {repos.repositories.map(repo => {
+                return (
+                  <RepositoryContent
+                    name={repo.name}
+                    description={repo.description}
+                    stars={repo.stargazers_count}
+                    key={repo.id}
+                  />)
+              })}
+            </section>
+          </div>
+
+          : <NotFound />}
         <Footer/>
       </div>
     );
