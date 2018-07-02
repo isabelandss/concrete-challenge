@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.css';
+import './Input.css';
 import Search from '../../assets/images/search.svg';
 
 const Input = ({ onChange, onSubmit }) => {

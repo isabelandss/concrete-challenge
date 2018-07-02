@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.css';
+import './UserContentItem.css';
 
 const UserContentItem = ({ name, value }) =>
   <div className="content-item">

@@ -1,6 +1,6 @@
 import React from 'react';
 import Star from '../../assets/images/star.svg';
-import './style.css';
+import './RepositoryContent.css';
 
 const RepositoryContent = ({ name, description, stars }) => 
   <article className="repository-content-wrapper">

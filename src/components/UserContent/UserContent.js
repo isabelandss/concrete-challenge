@@ -1,6 +1,6 @@
 import React from 'react';
 import UserContentItem from '../UserContentItem';
-import './style.css';
+import './UserContent.css';
 
 const UserContent = ({ user, avatar_url, name, login }) => {
   return (

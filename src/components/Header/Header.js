@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.css';
+import './Header.css';
 import Input from '../Input';
 
 const Header = ({ onChange, onSubmit }) =>
