@@ -4,8 +4,8 @@ import './style.css';
 
 const UserContent = ({ user, avatar_url, name, login }) => {
   return (
-    <aside>
-      <img className="avatar" src={avatar_url} alt="Avatar do usuário" />
+    <aside className="user-content-wrapper">
+      <img className="user-avatar" src={avatar_url} alt="Avatar do usuário" />
       <p className="user-name">{name}</p>
       <p className="user-login">{login}</p>
       {

@@ -3,16 +3,16 @@ import Star from '../../assets/images/star.svg';
 import './style.css';
 
 const RepositoryContent = ({ name, description, stars }) => 
-  <article>
-    <header className="title-repo">
+  <article className="repository-content-wrapper">
+    <header className="repository-title">
       {name}
     </header>
-    <p className="description-repo">
+    <p className="repository-description">
       {description}
     </p>
-    <div className="rate-repo">
+    <div className="repository-rate">
       <img src={Star} alt=""/>
-      <p className="quantity">{stars}</p>
+      <p className="repository-quantity">{stars}</p>
     </div>
   </article>
 

@@ -1,11 +1,11 @@
-aside {
+.user-content-wrapper {
   flex: 1;
   flex-grow: 1;
   flex-direction: column;
   padding: 2vh 3vw;
 }
 
-.avatar {
+.user-avatar {
   height: 280px;
   border-radius: 2px;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.4);
@@ -33,13 +33,13 @@ aside {
 }
 
 @media (max-width: 600px) { 
-  aside {
+  .user-content-wrapper {
     width: 94%;
     justify-content: center;
     flex-direction: column;
   }
 
-  aside p {
+  .user-content-wrapper p {
     display: flex;
     font-family: Raleway;
     justify-content: center;
@@ -59,7 +59,7 @@ aside {
     width: 100%;
   }
 
-  .avatar {
+  .user-avatar {
     width: 50%;
     height: 50%;
     margin-top: 30px;
