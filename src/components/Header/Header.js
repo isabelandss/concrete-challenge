@@ -5,7 +5,7 @@ import Input from '../Input';
 const Header = ({ onChange, onSubmit }) =>
   <header>
     <nav className="header-nav">
-      <div className="header-logo">
+      <div className="header-logo" onClick={() => window.location = "/"}>
         <p className="header-firstname">GitHub<span className="header-lastname">Search</span></p>
       </div>
       <div className="header-search">

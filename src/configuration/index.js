@@ -1,6 +1,6 @@
 const config = {
   github_api_url: 'https://api.github.com',
-  access_token: 'ad6787ece9726489dad869c2b4a3dfff5f51a3f3'
+  access_token: '9bb75ea1eb47eb4949bbfd83c360a3d96c79c2b5'
 };
 
 export default config;

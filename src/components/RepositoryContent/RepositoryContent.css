@@ -10,6 +10,15 @@
   font-size: 35px;
   color: #ac53f2;
   word-wrap: break-word;
+  cursor: pointer;
+}
+
+.repository-redirect:link,
+.repository-redirect:hover,
+.repository-redirect:focus,
+.repository-redirect:visited {
+  text-decoration: none;
+  color: #ac53f2;
 }
 
 .repository-description {
@@ -48,7 +57,7 @@
   color: #5c5c5c;
 }
 
-@media (max-width: 600px) { 
+@media (max-width: 600px) {
   .repository-content-wrapper {
     max-width: 100%;
     height: auto;
