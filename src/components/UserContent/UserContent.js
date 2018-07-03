@@ -9,16 +9,11 @@ const UserContent = ({ user, avatar_url, name, login }) => {
       <p className="user-name">{name}</p>
       <p className="user-login">{login}</p>
       {
-          Object
-            .entries(user)
-            .map(([name, value], i) => {
-              if(value) {
-                return (
-                  <UserContentItem key={i} name={name} value={value} />
-                );
-              }
-            })
-        }
+        Object
+          .entries(user)
+          .filter((user) => user[1])
+          .map(([name, value], i) => <UserContentItem key={i} name={name} value={value} />)
+      }
     </aside>
   );
 }

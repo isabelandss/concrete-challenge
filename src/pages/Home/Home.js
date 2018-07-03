@@ -22,16 +22,17 @@ class Home extends Component {
     this.setState({ search: value });
   }
 
-  async onSubmit(event) {
-    try {
-      event.preventDefault();
-      const user = await userService.getUser(this.state.search);
-      const repos = await repoService.getRepos(this.state.search);
-
+  onSubmit(event) {
+    event.preventDefault();
+    Promise.all([
+      userService.getUser(this.state.search),
+      repoService.getRepos(this.state.search)
+    ]).then((retorno) => {
+      const [ user, repos ] = retorno;
       this.props.history.push('/result', { user, repos, found: true });
-    } catch (error) {
+    }).catch(error => {
       this.props.history.push('/result', { found: false });
-    }
+    });
   }
 
   render() {

@@ -38,23 +38,24 @@ class Result extends React.Component {
     this.setState({ search: value });
   }
 
-  async handleSubmit(event) {
+  handleSubmit(event) {
     event.preventDefault();
-    try {
-      const user = await userService.getUser(this.state.search);
-      const repos = await repoService.getRepos(this.state.search);
+    Promise.all([
+      userService.getUser(this.state.search),
+      repoService.getRepos(this.state.search)
+    ]).then((retorno) => {
+      const [ user, repos ] = retorno;
 
       this.setState({
         user,
         repos,
         found: true,
       });
-
-    } catch (error) {
+    }).catch(error => {
       this.setState({
         found: false
       });
-    }
+    });
   }
 
   render() {
@@ -65,7 +66,7 @@ class Result extends React.Component {
           onChange={this.handleChange}
           onSubmit={this.handleSubmit}
         />
-        { this.state.found ?
+        {this.state.found ?
           <div className="wrapper">
             <UserContent
               name={user.name}
@@ -83,20 +84,22 @@ class Result extends React.Component {
               }
             />
             <section>
-              {repos.repositories.map(repo => {
-                return (
+              {
+                repos.repositories.map(repo =>
                   <RepositoryContent
                     name={repo.name}
                     description={repo.description}
                     stars={repo.stargazers_count}
+                    html_url={repo.html_url}
                     key={repo.id}
-                  />)
-              })}
+                  />
+                )
+              }
             </section>
           </div>
           : <div className="wrapper-notfound">
-              <NotFound />
-            </div>}
+            <NotFound />
+          </div>}
         <Footer className={this.state.found ? '' : 'fixed'} />
       </div>
     );
