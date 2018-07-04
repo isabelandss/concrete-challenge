@@ -1,9 +1,5 @@
 import React from 'react';
-import Header from '../../components/Header';
-import UserContent from '../../components/UserContent';
-import RepositoryContent from '../../components/RepositoryContent';
-import Footer from '../../components/Footer';
-import NotFound from '../../components/NotFound';
+import { Header, UserContent, RepositoryContent, Footer, NotFound } from '../../components';
 import { userService, repoService } from '../../services';
 import './style.css';
 
