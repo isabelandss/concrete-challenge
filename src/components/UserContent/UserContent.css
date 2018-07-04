@@ -1,0 +1,71 @@
+.user-content-wrapper {
+  flex: 1;
+  flex-grow: 1;
+  flex-direction: column;
+  padding: 2vh 3vw;
+  padding-bottom: 45px;
+}
+
+.user-avatar {
+  height: 280px;
+  border-radius: 2px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.4);
+}
+
+.user-name {
+  margin-top: 12px;
+  font-size: 35px;
+  height: auto;
+  width: 280px;
+  font-family: Raleway;
+  font-weight: 300;
+  color: #000000;
+}
+
+.user-login {
+  margin-top: 5px;
+  width: 280px;
+  height: 25px;
+  font-family: Raleway;
+  font-size: 20px;
+  font-weight: 300;
+  color: #5c5c5c;
+  margin-bottom: 26px;
+}
+
+@media (max-width: 600px) { 
+  .user-content-wrapper {
+    width: 94%;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .user-content-wrapper p {
+    display: flex;
+    font-family: Raleway;
+    justify-content: center;
+  }
+
+  .user-name {
+    margin: 0;
+    margin-top: 12px;
+    font-size: 35px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .user-login {
+    margin: 0;
+    font-size: 20px;
+    width: 100%;
+  }
+
+  .user-avatar {
+    width: 50%;
+    /* height: 50%; */
+    height: 24%;
+    margin-top: 30px;
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+}

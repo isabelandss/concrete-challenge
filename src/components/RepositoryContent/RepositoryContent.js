@@ -1,7 +1,21 @@
 import React from 'react';
-import './style.css';
+import Star from '../../assets/images/star.svg';
+import './RepositoryContent.css';
 
-const RepositoryContent = (props) => 
-  <article></article>
+const RepositoryContent = ({ name, description, stars, html_url }) =>
+  <article className="repository-content-wrapper">
+    <header className="repository-title">
+      <a href={html_url} target="_blank" className="repository-redirect">
+        {name}
+      </a>
+    </header>
+    <p className="repository-description">
+      {description}
+    </p>
+    <div className="repository-rate">
+      <img src={Star} alt="Imagem de estrela"/>
+      <p className="repository-quantity">{stars}</p>
+    </div>
+  </article>
 
 export default RepositoryContent;

@@ -1,7 +1,9 @@
 import React from 'react';
-import './style.css';
+import './Footer.css';
 
-const Footer = (props) => 
-  <footer></footer>
+const Footer = ({ className = '' }) =>
+  <footer className={className}>
+    Copyright © Isabela Neri 2018
+  </footer>
 
 export default Footer;
