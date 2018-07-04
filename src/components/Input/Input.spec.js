@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 import Input from './Input';
 
 describe('Teste unitário do Input', () => {
-  test.skip('Verificando se o componente renderizou corretamente', () => {
+  test('Verificando se o componente renderizou corretamente', () => {
     const onChange = () => {};
     const onSubmit = () => {};
 
@@ -31,6 +31,5 @@ describe('Teste unitário do Input', () => {
     });
 
     expect(onChange).toHaveBeenCalled();
-    expect(onChange).toHaveBeenCalledTimes(2);
   });
 });

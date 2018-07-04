@@ -1,7 +1,7 @@
 import React from 'react';
 import { Header, UserContent, RepositoryContent, Footer, NotFound } from '../../components';
 import { userService, repoService } from '../../services';
-import './style.css';
+import './Result.css';
 
 class Result extends React.Component {
   constructor(props) {

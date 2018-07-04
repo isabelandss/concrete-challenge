@@ -1,13 +1,14 @@
 import React from 'react';
 import './Header.css';
 import Input from '../Input';
+import { Link } from 'react-router-dom';
 
 const Header = ({ onChange, onSubmit }) =>
   <header>
     <nav className="header-nav">
-      <div className="header-logo" onClick={() => window.location = "/"}>
+      <Link className="header-logo" to="/">
         <p className="header-firstname">GitHub<span className="header-lastname">Search</span></p>
-      </div>
+      </Link>
       <div className="header-search">
         <Input onChange={onChange} onSubmit={onSubmit}/>
       </div>
