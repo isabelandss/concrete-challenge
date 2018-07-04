@@ -1,12 +1,7 @@
 import React from 'react';
-import Header from '../../components/Header';
-import UserContent from '../../components/UserContent';
-import RepositoryContent from '../../components/RepositoryContent';
-import Footer from '../../components/Footer';
-import NotFound from '../../components/NotFound';
+import { Header, UserContent, RepositoryContent, Footer, NotFound } from '../../components';
+import { userService, repoService } from '../../services';
 import './style.css';
-import { userService } from '../../services/user';
-import { repoService } from '../../services/repo';
 
 class Result extends React.Component {
   constructor(props) {
@@ -21,6 +16,7 @@ class Result extends React.Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.mountObjectUserDetail = this.mountObjectUserDetail.bind(this);
   }
 
   componentDidMount() {
@@ -58,6 +54,18 @@ class Result extends React.Component {
     });
   }
 
+  mountObjectUserDetail() {
+    const { user, repos } = this.state;
+    return {
+      company: user.company,
+      location: user.location,
+      stars: repos.stars,
+      public_repos: user.public_repos,
+      followers: user.followers,
+      bio: user.bio,
+    }
+  }
+
   render() {
     const { user, repos } = this.state;
     return (
@@ -72,16 +80,7 @@ class Result extends React.Component {
               name={user.name}
               login={user.login}
               avatar_url={user.avatar_url}
-              user={
-                {
-                  company: user.company,
-                  location: user.location,
-                  stars: repos.stars,
-                  public_repos: user.public_repos,
-                  followers: user.followers,
-                  bio: user.bio
-                }
-              }
+              user={this.mountObjectUserDetail()}
             />
             <section>
               {

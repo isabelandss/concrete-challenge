@@ -1,6 +1,6 @@
 const config = {
-  github_api_url: 'https://api.github.com',
-  access_token: '9bb75ea1eb47eb4949bbfd83c360a3d96c79c2b5'
+  github_api_url: process.env.REACT_APP_GITHUB_API,
+  access_token: process.env.REACT_APP_ACCESS_TOKEN
 };
 
 export default config;

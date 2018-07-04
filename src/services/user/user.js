@@ -1,10 +1,8 @@
-import config from '../../configuration';
-
-export default ({request}) => ({
+export default ({request, configVariables}) => ({
   getUser: username => {
-    return request.get(`${config.github_api_url}/users/${username}`, {
+    return request.get(`${configVariables.github_api_url}/users/${username}`, {
       headers: {
-        'Authorization': `token ${config.access_token}`
+        'Authorization': `token ${configVariables.access_token}`
       }
     })
     .then(user => user.data)
