@@ -4,9 +4,8 @@ import UserContent from '../../components/UserContent';
 import RepositoryContent from '../../components/RepositoryContent';
 import Footer from '../../components/Footer';
 import NotFound from '../../components/NotFound';
+import { userService, repoService } from '../../services';
 import './style.css';
-import { userService } from '../../services/user';
-import { repoService } from '../../services/repo';
 
 class Result extends React.Component {
   constructor(props) {

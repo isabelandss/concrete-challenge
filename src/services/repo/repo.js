@@ -1,16 +1,14 @@
-import config from '../../configuration';
-
 const sumStargazersCount = repos =>
   repos.reduce((actualRepo, nextRepos) => actualRepo + parseInt(nextRepos.stargazers_count, 10), 0);
 
 const orderRepos = repos =>
   repos.sort((actual, next) => next.stargazers_count - actual.stargazers_count);
 
-export default ({request}) => ({
+export default ({request, configVariables}) => ({
   getRepos: username => {
-    return request.get(`${config.github_api_url}/users/${username}/repos`, {
+    return request.get(`${configVariables.github_api_url}/users/${username}/repos`, {
       headers: {
-        'Authorization': `token ${config.access_token}`
+        'Authorization': `token ${configVariables.access_token}`
       }
     })
     .then(repositories => ({
@@ -20,6 +18,6 @@ export default ({request}) => ({
     .catch(error => {
       console.log(`erro : ${error}`);
       throw error;
-    })
+    });
   }
 });
