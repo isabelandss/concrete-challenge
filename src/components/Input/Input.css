@@ -1,0 +1,38 @@
+.input-form {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.4);
+}
+
+.input-text {
+  position: relative;
+  width: 85%;
+  height: 50px;
+  border: none;
+
+  padding-left: 9px;
+  padding-right: 9px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+}
+
+.input-text:focus {
+  outline-color: #ac53f2; 
+}
+
+.input-button {
+  position: relative;
+  width: 15%;
+  height: 50px;
+  border: none;
+  background-color: #ac53f2;
+  color: white;
+  cursor: pointer;
+}
+
+.input-button img {
+  width: 30px;
+  height: 30px;
+}

@@ -1,0 +1,42 @@
+.home-wrapper {
+  width: 100%;
+  max-height: 100vh;
+  height: 100%;
+  position: absolute;
+  overflow-x: hidden;
+  font-family: Raleway, 'sans-serif';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-search {
+  font-size: 60px;
+  text-align: center;
+  width: 650px;
+  height: 50px;
+}
+
+.logo {
+  font-family: Monaco;
+}
+
+p span::before {
+  content: " ";
+}
+
+p span {
+  font-family: "Raleway";
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .logo {
+    margin-bottom: 5px;
+  }
+
+  .home-search {
+    font-size: 35px;
+    width: 90%;
+  }
+}
