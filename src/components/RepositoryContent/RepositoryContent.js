@@ -13,7 +13,7 @@ const RepositoryContent = ({ name, description, stars, html_url }) =>
       {description}
     </p>
     <div className="repository-rate">
-      <img src={Star} alt="" />
+      <img src={Star} alt="Imagem de estrela"/>
       <p className="repository-quantity">{stars}</p>
     </div>
   </article>
